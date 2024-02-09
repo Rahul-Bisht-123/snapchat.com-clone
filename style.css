@@ -1,0 +1,591 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #FEFC00;
+    --white: #ffffff;
+    --black: #000000;
+    --blue-v150: #0fadff;
+    --grey: #9a9fa7;
+}
+
+body {
+    font-family: Graphik, Helvetica, sans-serif;
+}
+
+/* --------------------------nav----------------------- */
+nav {
+    /* border: 2px solid red; */
+    background-color: var(--yellow);
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+/* -------------------------nav-left------------------- */
+.nav-left {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.search {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    width: 190px;
+    border-radius: 30px;
+    padding: 7px;
+}
+
+.input-box {
+    margin: 0 7px;
+    outline: none;
+    width: 120px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+}
+
+/* -------------------------nav-middle------------------- */
+
+.nav-middle {
+    width: 320px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-middle-button p {
+    margin-top: 5px;
+}
+
+.nav-middle-button a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* for smooth square grey color hover */
+.nav-middle-button {
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.new-feature {
+    position: relative;
+}
+
+.nav-middle-button>.new-icon {
+    position: absolute;
+    left: 30px;
+    top: 1px;
+    color: var(--white);
+    background-color: var(--blue-v150);
+    width: 28px;
+    font-size: 8px;
+    padding: 2px 1px;
+    border-radius: 8px;
+    vertical-align: middle;
+}
+
+.nav-middle-button:hover {
+    background-color: rgba(128, 128, 128, 0.183);
+}
+
+/* -------------------------nav-right------------------- */
+
+.nav-right {
+    /* background-color: aquamarine; */
+    width: 310px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons {
+    /* background-color: pink; */
+    display: flex;
+    gap: 10px;
+}
+
+.nav-right .circle-menu {
+    display: flex;
+    padding: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.nav-right .snap-ads {
+    cursor: pointer;
+    border: none;
+    height: 33px;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.nav-right .download {
+    cursor: pointer;
+    border: none;
+    height: 33px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.nav-right .circle-menu:hover {
+    background-color: rgba(185, 184, 184, 0.777);
+}
+
+/* ----------mini-nav for small screen-------*/
+
+.mini-nav {
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    display: none;
+    justify-content: space-around;
+}
+
+.mini-nav-left {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.circle1 {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+div.circle2 {
+    position: relative;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.input-search {
+    width: 38px;
+    height: 38px;
+    border-radius: 50px;
+    padding-left: 36px;
+    padding-right: 5px;
+    transition: width 0.55s ease;
+    font-weight: bold;
+    border: none;
+
+}
+
+.search-icon {
+    position: absolute;
+    margin-top: 9px;
+    margin-left: 11px;
+}
+
+.input-search:focus {
+    width: 150px;
+    outline: none;
+}
+
+.circle2:hover .input-search {
+    width: 150px;
+}
+
+.mini-nav-middle {
+    display: flex;
+    align-items: center;
+}
+
+.mini-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------------main------------------- */
+
+main {
+    height: 780px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--yellow);
+}
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 150px;
+    padding-right: 28px;
+    gap: 25px;
+}
+
+.new {
+    color: var(--white);
+    background-color: var(--blue-v150);
+    font-size: 10px;
+    padding: 3.5px 5px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.p1 {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.p2,
+.p3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.chat-button {
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 25px;
+    width: 230px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.responsive {
+    max-width: 700px;
+    width: 50vw;
+}
+
+/* div main-mini this items will appears when screen is small */
+
+.main-mini {
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.main-mini-text {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 240px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.main-mini-text h1 {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0px auto 10px;
+    padding: 0 20px;
+}
+
+.one,
+.two,
+.three {
+    margin: 0 auto;
+}
+
+.download-btn {
+    background-color: var(--black);
+    text-decoration: none;
+    color: var(--white);
+    margin: 20px auto;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.up-arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.discover-snapchat {
+    margin-bottom: 30px;
+}
+
+.main-mini-videos {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 68vh;
+
+}
+
+.video-container>video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.video-container .p-one {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 40%;
+    width: 100%;
+    line-height: 1.2;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.02));
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.video-container a {
+    position: absolute;
+    text-decoration: none;
+    color: var(--black);
+    padding: 13px 22px;
+    text-align: center;
+    border-radius: 20px;
+    bottom: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--yellow);
+}
+
+/* -------------------------footer------------------- */
+footer {
+    font-family: Avenir Next, Helvetica, sans-serif;
+    background-color: #F8F9FB;
+    width: 100%;
+}
+
+.footer-one {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-one-col {
+    width: 267.5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding-right: 66.8px;
+    padding-top: 35px;
+}
+
+.footer-one-col p {
+    font-weight: 600;
+}
+
+.footer-one-col a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.language {
+    margin-top: 70px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.select {
+    border: unset;
+    font-family: Avenir Next, Helvetica, sans-serif;
+    outline: none;
+    border: 1px solid rgb(156, 156, 156);
+    margin-top: 10px;
+    width: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    color: #3c3b3b;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-two {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #262626;
+    height: 56px;
+    color: var(--white);
+    padding-left: 180px;
+    gap: 40px;
+    align-items: center;
+}
+
+.footer-two-yellow-fake {
+    background-color: var(--yellow);
+    height: 56px;
+}
+
+.footer-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 56px;
+    background-color: var(--black);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-three a {
+    color: var(--yellow);
+}
+
+/* ------------------------mini-footer----------------- */
+/* div footer-mini this items will appears when screen is small */
+
+/* (if flex-direction is row-> main axis is same left to right) */
+/* (if flex-direction is col-> main axis is top to bottom) */
+.mini-footer {
+    background-color: var(--yellow);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding-top: 40px;
+    display: none;
+
+}
+
+.mini-footer p {
+    line-height: 0.9;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.mini-footer-download-btn {
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.mini-footer-text-links {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black)
+}
+
+/* -----------mini-footer2-----fixed and sticky divs are in it */
+
+.mini-footer2 {
+    width: 100vw;
+    display: none;
+}
+
+.mini-footer-sticky {
+    position: fixed;
+    bottom: 50px;
+    width: 100vw;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-footer-sticky a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--black);
+    padding: 5px 0;
+    text-align: center;
+}
+
+.mini-footer-sticky>a>img {
+    height: 25px;
+}
+
+.mini-footer-fixed {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--black);
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-footer-fixed a {
+    display: flex;
+    align-items: center;
+    background-color: var(--yellow);
+    text-decoration: none;
+    color: var(--black);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 6px 16px 8px;
+}
+
+/* -----------media-query------- */
+@media(max-width:1033px) {
+
+    .nav-left,
+    .nav-right,
+    .nav-middle,
+    footer,
+    main {
+        display: none;
+    }
+
+    .mini-nav,
+    .main-mini,
+    .mini-footer,
+    .mini-footer2 {
+        display: flex;
+    }
+}
